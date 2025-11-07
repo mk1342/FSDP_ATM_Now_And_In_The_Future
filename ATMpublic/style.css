@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.atm-container {
+    width: 1000px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e1e8ed;
+}
+
+.atm-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.atm-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.atm-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 500px;
+}
+
+.left-panel {
+    background: #f8f9fa;
+    padding: 40px;
+    border-right: 1px solid #e1e8ed;
+}
+
+.greeting {
+    margin-bottom: 40px;
+}
+
+.greeting h1 {
+    color: #ff6b6b;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.greeting p {
+    color: #666;
+    font-size: 16px;
+}
+
+.service-category h2 {
+    color: #ff6b6b;
+    font-size: 22px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6b6b;
+}
+
+.amount-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.amount-btn {
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ff6b6b);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 71, 171, 0.2);
+}
+
+.amount-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 71, 171, 0.3);
+    background: linear-gradient(135deg, #ff6b6b, #ff6b6b);
+}
+
+.other-amount-btn {
+    width: 100%;
+    padding: 18px;
+    background: #f0f4f8;
+    color: #ff6b6b;
+    border: 2px dashed #ff6b6b;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.other-amount-btn:hover {
+    background: #e3ecf7;
+    border-style: solid;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.non-cash-services {
+    background: #f8f9fa;
+    padding: 30px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.non-cash-services h2 {
+    color: #ff6b6b;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.service-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    color: #ff6b6b;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.service-btn:hover {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 71, 171, 0.2);
+}
+
+.service-btn .icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.transaction-display {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-message {
+    text-align: center;
+    color: #666;
+}
+
+.welcome-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.welcome-message h3 {
+    color: #ff6b6b;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.atm-footer {
+    background: #f8f9fa;
+    padding: 20px 40px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background: #e17055;
+    color: white;
+}
+
+.clear-btn {
+    background: #fdcb6e;
+    color: white;
+}
+
+.enter-btn {
+    background: #00b894;
+    color: white;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.card-slot {
+    text-align: center;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-icon {
+    font-size: 24px;
+}

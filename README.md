@@ -28,6 +28,7 @@ Node.js
 
 ### highly recommended for troubleshooting
 [Postman](https://www.postman.com/downloads/) - for testing API endpoints
+
 [VSCode](https://code.visualstudio.com/download) - for code editing and debugging
 
 ## How to Clone the Repository

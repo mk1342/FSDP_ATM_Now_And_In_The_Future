@@ -1,57 +1,62 @@
 Write-Host "this file contains the nessacary startup dependencies."
 #setup for starting project
 
-Write-Host "If the current setup does not run, Please run the following command to install the dependencies:"
-Write-Host "pip install -r requirements.txt"
-Write-Host "depending on your python installation."
-
 #Ensure you're in the root folder of the project
-Write-Host "Moving to project directory..."
 Set-Location -Path "$PSScriptRoot"
-Write-Host "Starting the project..."
+Write-Host "Working directory set to project root: $PSScriptRoot"
+
+## ---------------------- backend setup ---------------------- ##
 
 
-
-# MongoDB setup
-choco install mongodb-atlas-cli
-choco install docker-desktop
-
-Write-Host "27017 SHOULD be default port for mongodb"
-atlas deployments setup testing --type local \ --mdbVersion 8.0 --port 27017 --connectWith skip
 
 # npm packages setup (if applicable)
 Write-Host "Installing required npm packages..."
-npm install express dotenv # check with package.json for any additional dependencies
+npm install express dotenv mongoose # check with package.json for any additional dependencies
 
-# vue.js (check)
-npm install -g @vue/cli
-vue create my-vue-app
-cd my-vue-app
-npm run serve
-cd ..
+# vue cli (check)
+Write-Host "Checking if Vue CLI is installed..."
+
+
+# :) 
+$vueExists = (Get-Command vue -ErrorAction SilentlyContinue)
+
+if ($null -eq $vueExists) {
+    Write-Host "Vue CLI not detected. Installing globally..."
+    npm install -g @vue/cli
+    Write-Host "Vue CLI installed."
+} else {
+    Write-Host "Vue CLI already installed."
+}
+
+# Frontend dependencies setup
+Write-Host "Installing frontend dependencies..."
+Set-Location -Path ".\my-vue-app"
+npm install
+Set-Location -Path "$PSScriptRoot"
+Write-Host "Frontend dependencies installed."=
+
+# MongoDB setup
+Write-Host "Please ensure MongoDB is installed locally."
+Write-Host "No automatic database setup is performed here."
 
 # Node.js setup (check)
 Write-Host "Installing required Node.js packages..."
 #npm install mongoose cors body-parser
 #npm install nodemon --save-dev
 
+Write-Host " Setup complete!"
 
 
-# Test connection
-atlas deployments connect myTestDb --connectWith mongosh
-show dbs
-use myTestDb
-show collections
-db.createCollection("testCollection")
-db.testCollection.insertOne({name: "test"})
-db.testCollection.find({name: "test"})
-exit
-Write-Host MongoDB setup complete.
+Write-Host ""
+Write-Host ""
 
-# Start the project
-Write-Host were not using pyhton
+Write-Host " To start the project, run:  .\run.ps1"
 
-node .\app.js
+Write-Host ""
 
-Write-Host Project started successfully.
-Write-Host documentation? lol.
+Write-Host " To exit the terminal, press: Ctrl + C"
+
+# Prevent the script from blowing up user terminal
+while ($true) {
+    Start-Sleep -Seconds 1
+}

@@ -1,39 +1,51 @@
-
+    
 // app.js wasnt supposed to be called to set up routes, routes have been ported to /routes
-//find out why thats the case
 
-//// interactable with the database 
-//const express = require("express");
-//const sql = require("mssql");
-//const dotenv = require("dotenv");
-//const tagRoutes = require('./routes/tagRoutes');
-//const userRoutes = require("./routes/userRoutes");
+// interactable with the database 
+const express = require("express");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 
-//const app = express();
-//const port = process.env.PORT || 3000;
+dotenv.config();
+const app = express();
+const port = process.env.PORT || 3000;
 
-//const imageRoutes = require("./routes/imageRoutes");
 
-//app.use(express.json());
-//app.use(express.static("public"));
+// -----------------------------------------------
+// Load environment variables
+// -----------------------------------------------
 
-//app.use((req, res, next) => {
-//  console.log(`[${req.method}] ${req.url}`);
-//  next();
-//});
-//// Mount image routes at /images
-//app.use("/images", imageRoutes
-//);
-//// Mount tag routes at /tags
-//app.use('/tags', tagRoutes);
-//app.use("/api/users", userRoutes);
+// Middleware
+app.use(express.json()); // parse JSON bodies
+
+
+// Connect to MongoDB
+
+// i dont know what this is? i just copied from documentation, lol
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log("Connected to MongoDB"))
+    .catch((err) => console.error("MongoDB connection error:", err));
+
+
+// Routes (already ported to /routes)
+
+const routes = require("./routes"); // adjust path if needed
+app.use("/api", routes);
+
+
 
 // Start server
+
 app.listen(port, () => {
+  console.log(``);
   console.log(`Server running on port ${port}`);
 });
 
 // Graceful shutdown
+
 process.on("SIGINT", async () => {
   console.log("Server is gracefully shutting down");
   await sql.close();

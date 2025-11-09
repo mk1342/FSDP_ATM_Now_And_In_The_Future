@@ -3,30 +3,18 @@
 //find out why thats the case
 
 //// interactable with the database 
-//const express = require("express");
-//const sql = require("mssql");
-//const dotenv = require("dotenv");
-//const tagRoutes = require('./routes/tagRoutes');
-//const userRoutes = require("./routes/userRoutes");
+const express = require("express");
+const dotenv = require("dotenv");
 
-//const app = express();
-//const port = process.env.PORT || 3000;
+const app = express();
+const port = process.env.PORT || 3000;
 
-//const imageRoutes = require("./routes/imageRoutes");
 
-//app.use(express.json());
-//app.use(express.static("public"));
-
-//app.use((req, res, next) => {
-//  console.log(`[${req.method}] ${req.url}`);
-//  next();
-//});
-//// Mount image routes at /images
-//app.use("/images", imageRoutes
-//);
-//// Mount tag routes at /tags
-//app.use('/tags', tagRoutes);
-//app.use("/api/users", userRoutes);
+// -----------------------------------------------
+// Load environment variables
+// all image routes, app.use should be placed here
+// not made yet
+// -----------------------------------------------
 
 // Start server
 app.listen(port, () => {

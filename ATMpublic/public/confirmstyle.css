@@ -193,3 +193,26 @@ body {
 .card-icon {
     font-size: 24px;
 }
+
+.helpdesk-button {
+  background-color: #ffffff;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  border-radius: 5px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: -100px;
+  margin-left: 30px
+}
+
+.helpdesk-button:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  transform: translateY(-3px);
+}

@@ -30,7 +30,7 @@ if ($null -eq $vueExists) {
 
 # Frontend dependencies setup
 Write-Host "Installing frontend dependencies..."
-Set-Location -Path ".\my-vue-app"
+Set-Location -Path ".\ATMpublic"
 npm install
 Set-Location -Path "$PSScriptRoot"
 Write-Host "Frontend dependencies installed."=
@@ -41,8 +41,7 @@ Write-Host "No automatic database setup is performed here."
 
 # Node.js setup (check)
 Write-Host "Installing required Node.js packages..."
-#npm install mongoose cors body-parser
-#npm install nodemon --save-dev
+
 
 Write-Host " Setup complete!"
 

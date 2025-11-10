@@ -28,6 +28,8 @@ Write-Host "Both backend and frontend servers are running."
 
 Write-Host "Project running backend server... Press Ctrl+C to stop."
 
+
+# Prevent the script from blowing up user terminal
 while ($true) {
     Start-Sleep -Seconds 2
 }

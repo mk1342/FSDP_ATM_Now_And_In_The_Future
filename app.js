@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes (already ported to /routes)
 
-const routes = require("./routes"); // adjust path if needed
+const routes = require("./routes/routes.js"); // adjust path if needed
 app.use("/api", routes);
 
 

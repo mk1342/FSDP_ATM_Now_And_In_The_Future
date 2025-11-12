@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Balance - OCBC Bank</title>
+    <link rel="stylesheet" href="account-balance.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="bank-header">
+            <div class="bank-logo">
+                <img src="images/ocbc_logo.png">
+            </div>
+            <h1>Account Balance</h1>
+        </div>
+
+        <div class="balance-container">
+            <div class="account-summary">
+                <div class="account-card">
+                    <div class="account-header">
+                        <h3>Savings Account</h3>
+                        <span class="account-number">***-***-1234</span>
+                    </div>
+                    <div class="balance-amount">
+                        <div class="available-balance">
+                            <span class="label">Available Balance</span>
+                            <span class="amount">S$ 12,450.75</span>
+                        </div>
+                        <div class="current-balance">
+                            <span class="label">Current Balance</span>
+                            <span class="amount">S$ 12,450.75</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="account-card">
+                    <div class="account-header">
+                        <h3>Current Account</h3>
+                        <span class="account-number">***-***-5678</span>
+                    </div>
+                    <div class="balance-amount">
+                        <div class="available-balance">
+                            <span class="label">Available Balance</span>
+                            <span class="amount">S$ 8,230.20</span>
+                        </div>
+                        <div class="current-balance">
+                            <span class="label">Current Balance</span>
+                            <span class="amount">S$ 8,230.20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <h3>Recent Transactions</h3>
+                <div class="transactions-list">
+                    <div class="transaction-item">
+                        <div class="transaction-details">
+                            <span class="description">Grocery Store Purchase</span>
+                            <span class="date">15 Nov 2024</span>
+                        </div>
+                        <span class="amount debit">-S$ 85.60</span>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-details">
+                            <span class="description">Salary Credit</span>
+                            <span class="date">12 Nov 2024</span>
+                        </div>
+                        <span class="amount credit">+S$ 4,500.00</span>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-details">
+                            <span class="description">Utility Bill Payment</span>
+                            <span class="date">10 Nov 2024</span>
+                        </div>
+                        <span class="amount debit">-S$ 120.35</span>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-details">
+                            <span class="description">Online Shopping</span>
+                            <span class="date">08 Nov 2024</span>
+                        </div>
+                        <span class="amount debit">-S$ 45.90</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="window.print()">Print Statement</button>
+                <button class="btn-secondary" onclick="window.location.href='morenoncashservice.html'">Back to Main</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="account-balance.js"></script>
+</body>
+</html>

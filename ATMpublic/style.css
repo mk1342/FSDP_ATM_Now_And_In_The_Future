@@ -24,7 +24,7 @@ body {
 }
 
 .atm-header {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
     color: white;
     padding: 20px 40px;
     display: flex;
@@ -60,7 +60,7 @@ body {
 }
 
 .greeting h1 {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 28px;
     margin-bottom: 8px;
 }
@@ -71,11 +71,11 @@ body {
 }
 
 .service-category h2 {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 22px;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #ff6b6b;
+    border-bottom: 3px solid #ED2722;
 }
 
 .amount-grid {
@@ -87,7 +87,7 @@ body {
 
 .amount-btn {
     padding: 25px 20px;
-    background: linear-gradient(135deg, #ff6b6b, #ff6b6b);
+    background: linear-gradient(135deg, #ED2722, #ED2722);
     color: white;
     border: none;
     border-radius: 12px;
@@ -101,15 +101,15 @@ body {
 .amount-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 71, 171, 0.3);
-    background: linear-gradient(135deg, #ff6b6b, #ff6b6b);
+    background: linear-gradient(135deg, #ED2722, #ED2722);
 }
 
 .other-amount-btn {
     width: 100%;
     padding: 18px;
     background: #f0f4f8;
-    color: #ff6b6b;
-    border: 2px dashed #ff6b6b;
+    color: #ED2722;
+    border: 2px dashed #ED2722;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 600;
@@ -134,7 +134,7 @@ body {
 }
 
 .non-cash-services h2 {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 22px;
     margin-bottom: 25px;
     text-align: center;
@@ -152,7 +152,7 @@ body {
     gap: 15px;
     padding: 20px;
     background: white;
-    color: #ff6b6b;
+    color: #ED2722;
     border: 2px solid #e1e8ed;
     border-radius: 12px;
     font-size: 16px;
@@ -163,9 +163,9 @@ body {
 }
 
 .service-btn:hover {
-    background: #ff6b6b;
+    background: #ED2722;
     color: white;
-    border-color: #ff6b6b;
+    border-color: #ED2722;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 71, 171, 0.2);
 }
@@ -195,7 +195,7 @@ body {
 }
 
 .welcome-message h3 {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 24px;
     margin-bottom: 10px;
 }

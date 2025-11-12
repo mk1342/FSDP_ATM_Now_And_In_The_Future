@@ -24,7 +24,7 @@ body {
 }
 
 .atm-header {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
     color: white;
     padding: 20px 40px;
     display: flex;
@@ -60,7 +60,7 @@ body {
 }
 
 .confirmation-card h1 {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 24px;
     margin-bottom: 30px;
     text-align: center;
@@ -93,13 +93,13 @@ body {
 }
 
 .label.recipient {
-    color: #ff6b6b;
+    color: #ED2722;
     font-weight: 600;
     font-size: 18px;
 }
 
 .value {
-    color: #ff6b6b;
+    color: #ED2722;
     font-size: 16px;
     font-weight: 500;
     text-align: right;

@@ -24,7 +24,7 @@ body {
 }
 
 .atm-header {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
     color: white;
     padding: 20px 40px;
     display: flex;
@@ -83,14 +83,14 @@ body {
 }
 
 .service-card:hover {
-    background: #ff6b6b;
+    background: #ED2722;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 71, 171, 0.2);
 }
 
 .service-card:hover .service-icon {
     background: white;
-    color: #ff6b6b;
+    color: #ED2722;
 }
 
 .service-card:hover .service-content h3,
@@ -101,7 +101,7 @@ body {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: #ff6b6b;
+    background: #ED2722;
     color: white;
     border-radius: 12px;
     display: flex;
@@ -139,7 +139,7 @@ body {
 
 .back-btn {
     padding: 12px 30px;
-    background: #ff6b6b;
+    background: #ED2722;
     color: white;
     border: none;
     border-radius: 25px;
@@ -149,7 +149,7 @@ body {
 }
 
 .back-btn:hover {
-    background: #ff6b6b;
+    background: #ED2722;
     transform: scale(1.05);
 }
 

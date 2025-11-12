@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Confirmation - OCBC Bank</title>
+    <link rel="stylesheet" href="transfer-confirmation.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="bank-header">
+            <div class="bank-logo">
+                <img src="images/ocbc_logo.png">
+            </div>
+            <h1>Transfer Confirmation</h1>
+        </div>
+
+        <div class="confirmation-container">
+            <div class="confirmation-success">
+                <div class="success-icon"><embed src="https://lottie.host/embed/0b26acb8-e914-4d45-a96e-f75e22e215de/aS9INWqDMr.lottie"></div>
+                <h2>Transfer Successful!</h2>
+                <p class="success-message">Your funds transfer has been processed successfully.</p>
+            </div>
+
+            <div class="transaction-details">
+                <h3>Transaction Details</h3>
+                <div class="details-grid" id="transactionDetails">
+                </div>
+            </div>
+
+            <div class="available-balance">
+                <div class="balance-card">
+                    <span class="balance-label">Available Balance</span>
+                    <span class="balance-amount" id="availableBalance">S$ 10,950.75</span>
+                </div>
+            </div>
+
+            <div class="confirmation-actions">
+                <button class="btn-primary" id="printReceiptBtn">Print Receipt</button>
+                <button class="btn-secondary" id="anotherTransferBtn" onclick="window.location.href='transfer-confirmation.html'">Make Another Transfer</button>
+                <button class="btn-outline" id="mainMenuBtn" onclick="window.location.href='morenoncashservice.html'">Back to Main Menu</button>
+            </div>
+
+            <div class="receipt-section" id="receiptSection" style="display: none;">
+                <div class="receipt" id="printableReceipt">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script  src="transfer-confirmation.js"></script>
+</body>
+</html>

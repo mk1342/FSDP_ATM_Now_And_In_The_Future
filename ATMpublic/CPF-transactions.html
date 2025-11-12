@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF Services - OCBC Bank</title>
+    <link rel="stylesheet" href="CPF-transactions.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="bank-header">
+            <div class="bank-logo">
+                <img src="https://www.ocbc.com/iwov-resources/sg/ocbc/img/logo_ocbc.svg" alt="OCBC Bank">
+            </div>
+            <h1>CPF Services</h1>
+        </div>
+
+        <div class="cpf-container">
+            <div class="cpf-summary">
+                <div class="cpf-account-card">
+                    <div class="cpf-account-header">
+                        <h3>CPF Account Summary</h3>
+                        <span class="cpf-member-id">Member ID: S1234567A</span>
+                    </div>
+                    <div class="cpf-balances">
+                        <div class="cpf-balance-item">
+                            <span class="account-type">Ordinary Account (OA)</span>
+                            <span class="balance-amount">S$ 85,420.00</span>
+                        </div>
+                        <div class="cpf-balance-item">
+                            <span class="account-type">Special Account (SA)</span>
+                            <span class="balance-amount">S$ 62,150.00</span>
+                        </div>
+                        <div class="cpf-balance-item">
+                            <span class="account-type">Medisave Account (MA)</span>
+                            <span class="balance-amount">S$ 48,730.00</span>
+                        </div>
+                        <div class="cpf-balance-item total">
+                            <span class="account-type">Total CPF Balance</span>
+                            <span class="balance-amount">S$ 196,300.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cpf-services-grid">
+                <div class="service-card" data-service="contribution">
+                    <div class="service-icon">💰</div>
+                    <h4>CPF Contribution</h4>
+                    <p>Make voluntary contributions to your CPF accounts</p>
+                </div>
+
+                <div class="service-card" data-service="withdrawal">
+                    <div class="service-icon">🏠</div>
+                    <h4>Property Withdrawal</h4>
+                    <p>Withdraw CPF funds for property purchase</p>
+                </div>
+
+                <div class="service-card" data-service="investment">
+                    <div class="service-icon">📈</div>
+                    <h4>CPF Investment</h4>
+                    <p>Invest your CPF savings in approved instruments</p>
+                </div>
+
+                <div class="service-card" data-service="housing">
+                    <div class="service-icon">🏡</div>
+                    <h4>Housing Loan</h4>
+                    <p>Use CPF for housing loan payments</p>
+                </div>
+
+                <div class="service-card" data-service="healthcare">
+                    <div class="service-icon">🏥</div>
+                    <h4>Healthcare</h4>
+                    <p>Pay for healthcare using Medisave</p>
+                </div>
+
+                <div class="service-card" data-service="statement">
+                    <div class="service-icon">📄</div>
+                    <h4>CPF Statement</h4>
+                    <p>View and download your CPF statement</p>
+                </div>
+            </div>
+
+            <div class="recent-transactions">
+                <h3>Recent CPF Transactions</h3>
+                <div class="transactions-list" id="cpfTransactionsList">
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <div class="links-grid">
+                    <a href="#" class="quick-link" onclick="openCPFWebsite()">
+                        <span class="link-icon">🌐</span>
+                        <span>CPF Website</span>
+                    </a>
+                    <a href="#" class="quick-link" onclick="showRetirementPlanning()">
+                        <span class="link-icon">👴</span>
+                        <span>Retirement Planning</span>
+                    </a>
+                    <a href="#" class="quick-link" onclick="showCPFCalculator()">
+                        <span class="link-icon">🧮</span>
+                        <span>CPF Calculator</span>
+                    </a>
+                    <a href="#" class="quick-link" onclick="showCPFContact()">
+                        <span class="link-icon">📞</span>
+                        <span>Contact CPF Board</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-secondary" onclick="window.location.href='morenoncashservice.html'">Back to Main</button>
+                <button class="btn-primary" onclick="refreshCPFData()">Refresh Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CPF Contribution Modal -->
+    <div class="modal" id="contributionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>CPF Contribution</h3>
+                <span class="close-modal" onclick="closeModal('contributionModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="contributionForm">
+                    <div class="form-group">
+                        <label for="contribution-amount">Contribution Amount (S$)</label>
+                        <input type="number" id="contribution-amount" class="form-input" min="1" max="37740" required>
+                        <span class="help-text">Maximum annual limit: S$ 37,740</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf-account">CPF Account</label>
+                        <select id="cpf-account" class="form-select" required>
+                            <option value="">Select Account</option>
+                            <option value="OA">Ordinary Account (OA)</option>
+                            <option value="SA">Special Account (SA)</option>
+                            <option value="MA">Medisave Account (MA)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method</label>
+                        <select id="payment-method" class="form-select" required>
+                            <option value="">Select Method</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <option value="paynow">PayNow</option>
+                            <option value="credit-card">Credit Card</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Make Contribution</button>
+                        <button type="button" class="btn-secondary" onclick="window.location.href='CPF-transactions.html'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="CPF-transactions.js"></script>
+</body>
+</html>

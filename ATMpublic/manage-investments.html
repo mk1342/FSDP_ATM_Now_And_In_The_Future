@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Investments - OCBC Bank</title>
+    <link rel="stylesheet" href="manage-investments.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="bank-header">
+            <div class="bank-logo">
+                <img src="images/ocbc_logo.png">
+            </div>
+            <h1>Manage Investments</h1>
+        </div>
+
+        <div class="investments-container">
+            <div class="portfolio-summary">
+                <div class="portfolio-card">
+                    <h3>Investment Portfolio</h3>
+                    <div class="portfolio-value">
+                        <span class="label">Total Portfolio Value</span>
+                        <span class="value">S$ 45,678.90</span>
+                    </div>
+                    <div class="portfolio-breakdown">
+                        <div class="breakdown-item">
+                            <span class="type">Stocks</span>
+                            <span class="amount">S$ 28,450.00</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="type">Unit Trusts</span>
+                            <span class="amount">S$ 12,345.90</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="type">Bonds</span>
+                            <span class="amount">S$ 4,883.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="investment-actions">
+                <div class="action-grid" id="actionGrid">
+                </div>
+            </div>
+
+            <div class="recent-investments">
+                <h3>Recent Investments</h3>
+                <div class="investments-list" id="investmentsList">
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-secondary" onclick="window.location.href='morenoncashservice.html'">Back to Main</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="manage-investments.js"></script>
+</body>
+</html>

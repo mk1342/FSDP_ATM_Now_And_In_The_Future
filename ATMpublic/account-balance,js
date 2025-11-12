@@ -1,0 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Account Balance page loaded');
+    
+    const transactionItems = document.querySelectorAll('.transaction-item');
+    
+    transactionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const description = this.querySelector('.description').textContent;
+            const amount = this.querySelector('.amount').textContent;
+            const date = this.querySelector('.date').textContent;
+            
+            alert(`Transaction Details:\n\nDescription: ${description}\nAmount: ${amount}\nDate: ${date}`);
+        });
+    });
+
+    setInterval(() => {
+        console.log('Balance auto-refresh triggered');
+    }, 30000);
+});

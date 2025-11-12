@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.bank-header {
+    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bank-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.bank-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.settings-container {
+    padding: 40px;
+}
+
+.settings-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.settings-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.settings-section h3 {
+    color: #ED2722;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #ED2722;
+}
+
+.form-input {
+    padding: 12px 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    max-width: 300px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ED2722;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.beneficiaries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.beneficiary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+    transition: all 0.3s ease;
+}
+
+.beneficiary-item:hover {
+    border-color: #ED2722;
+}
+
+.beneficiary-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.beneficiary-name {
+    font-weight: 600;
+    color: #ED2722;
+}
+
+.bank-account {
+    color: #666;
+    font-size: 14px;
+}
+
+.beneficiary-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.security-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.security-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #ED2722;
+    width: 100%;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ED2722, #ED2722);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ED2722, #ED2722);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 71, 171, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #ED2722;
+    border: 2px solid #e1e8ed;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+    border-color: #ED2722;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-small.edit {
+    background: #ED2722;
+    color: white;
+}
+
+.btn-small.edit:hover {
+    background: #ED2722;
+}
+
+.btn-small.delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-small.delete:hover {
+    background: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 10px;
+    }
+    
+    .bank-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .settings-container {
+        padding: 20px;
+    }
+    
+    .beneficiary-item {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .beneficiary-actions {
+        align-self: flex-end;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .form-input {
+        max-width: 100%;
+    }
+}

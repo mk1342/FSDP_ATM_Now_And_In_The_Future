@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.bank-header {
+    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bank-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.bank-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.confirmation-container {
+    padding: 40px;
+}
+
+.confirmation-success {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #00b894;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.confirmation-success h2 {
+    color: #00b894;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.success-message {
+    color: #666;
+    font-size: 16px;
+}
+
+.transaction-details {
+    margin-bottom: 30px;
+}
+
+.transaction-details h3 {
+    color: #ED2722;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #ED2722;
+}
+
+.detail-value.amount {
+    color: #00b894;
+    font-size: 18px;
+}
+
+.detail-value.status.completed {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.available-balance {
+    margin-bottom: 30px;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #ED2722, #ED2722);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.balance-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.balance-amount {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ED2722, #ED2722);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ED2722, #ED2722);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 71, 171, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #ED2722;
+    border: 2px solid #e1e8ed;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+    border-color: #ED2722;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ED2722;
+    border: 2px solid #ED2722;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #ED2722;
+    color: white;
+}
+
+.receipt-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.receipt {
+    background: white;
+    border: 2px dashed #bdc3c7;
+    padding: 25px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 15px;
+}
+
+.receipt-header h3 {
+    color: #ED2722;
+    margin-bottom: 5px;
+}
+
+.receipt-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #bdc3c7;
+}
+
+.receipt-footer {
+    text-align: center;
+    border-top: 1px solid #bdc3c7;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 10px;
+    }
+    
+    .bank-header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .confirmation-container {
+        padding: 20px;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+    }
+    
+    .confirmation-success {
+        padding: 20px;
+    }
+    
+    .success-icon {
+        font-size: 40px;
+    }
+    
+    .confirmation-success h2 {
+        font-size: 24px;
+    }
+}

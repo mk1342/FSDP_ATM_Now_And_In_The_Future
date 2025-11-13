@@ -31,7 +31,7 @@ class WelcomeATM {
     }
 
     handleQuickAmount(amount) {
-        alert(`Withdrawing $${amount}. This would proceed to transaction screen.`);
+        alert(`Withdrawing $${amount}.`);
     }
 
     handleServiceSelection(service) {

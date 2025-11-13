@@ -1,0 +1,2 @@
+if applicable:
+all static files from admin dashboard

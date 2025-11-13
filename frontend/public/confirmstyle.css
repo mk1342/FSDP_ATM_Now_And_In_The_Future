@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.atm-container {
+    width: 800px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e1e8ed;
+}
+
+.atm-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.atm-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.atm-main {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.confirmation-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #e1e8ed;
+}
+
+.confirmation-card h1 {
+    color: #ff6b6b;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.label.recipient {
+    color: #ff6b6b;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.value {
+    color: #ff6b6b;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.value.amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b894;
+}
+
+.value.account {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+.value.branch {
+    color: #666;
+    font-size: 14px;
+}
+
+.value.mode {
+    color: #e17055;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.confirm-btn {
+    background: linear-gradient(135deg, #00b894, #00a885);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+}
+
+.confirm-btn:hover {
+    background: linear-gradient(135deg, #00a885, #009975);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+}
+
+.cancel-btn {
+    background: #dfe6e9;
+    color: #636e72;
+}
+
+.cancel-btn:hover {
+    background: #b2bec3;
+    transform: translateY(-2px);
+}
+
+.atm-footer {
+    background: #f8f9fa;
+    padding: 20px 40px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.security-notice {
+    color: #00b894;
+    font-weight: 600;
+}
+
+.card-slot {
+    text-align: center;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-icon {
+    font-size: 24px;
+}
+
+.helpdesk-button {
+  background-color: #ffffff;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  border-radius: 5px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: -100px;
+  margin-left: 30px
+}
+
+.helpdesk-button:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  transform: translateY(-3px);
+}

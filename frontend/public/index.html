@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCBC ATM - Welcome</title>
+    <link rel="icon" type="image/gif" href="<%= BASE_URL %>favicon.gif">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="atm-container">
+        <div class="atm-header">
+            <div class="bank-logo">
+                <img src="images/ocbc_logo.png" alt="OCBC Bank">
+            </div>
+            <div class="atm-title">Welcome to OCBC ATM</div>
+        </div>
+
+        <div class="atm-main">
+            <div class="left-panel">
+                <div class="greeting">
+                    <h1>Hello!</h1>
+                    <p>What would you like to do today?</p>
+                </div>
+
+                <div class="service-category">
+                    <h2>Get Cash</h2>
+                    <div class="amount-grid">
+                        <button class="amount-btn" data-amount="50">$50</button>
+                        <button class="amount-btn" data-amount="80">$80</button>
+                        <button class="amount-btn" data-amount="100">$100</button>
+                        <button class="amount-btn" data-amount="500">$500</button>
+                    </div>
+                    <button class="other-amount-btn" id="other-amount">Other cash amounts</button>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="non-cash-services">
+                    <h2>Non Cash Services</h2>
+                    <div class="service-buttons">
+                        <button class="service-btn" data-service="activate-card">
+                            <span class="icon">💳</span>
+                            Activate card
+                        </button>
+                        <button class="service-btn" data-service="balance">
+                            <span class="icon">📊</span>
+                            Balance enquiry
+                        </button>
+                        <button class="service-btn" data-service="more" onclick="window.location.href='morenoncashservice.html'">
+                            <span class="icon">📋</span>
+                            More services
+                        </button>
+                    </div>
+                </div>
+
+                <div class="transaction-display">
+                    <div class="display-content active">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">👋</div>
+                            <h3>Welcome to OCBC</h3>
+                            <p>Please select a service to begin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="atm-footer">
+            <div class="control-panel">
+                <div class="card-slot">
+                    <div class="card-icon">💳</div>
+                    <p>Insert Card Here or Scan QR Code</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

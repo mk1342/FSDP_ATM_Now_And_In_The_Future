@@ -1,0 +1,19 @@
+﻿
+FSDP_ATM_Now_And_In_The_Future/
+│
+├── backend/
+│   ├── app.js
+│   ├── routes/
+│   ├── models/
+│   ├── middleware/
+│   ├── admin-static/           ← Admin’s HTML files go here
+│   └── package.json
+│
+├── frontend/
+│   ├── public/                 ← All teammate HTML + images
+│   ├── src/                    ← Vue components (if they ever use them)
+│   └── package.json
+│
+├── run.ps1
+├── startup.ps1
+└── README.md

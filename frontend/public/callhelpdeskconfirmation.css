@@ -134,6 +134,7 @@ body {
 .security-notice {
     color: #ff6b6b;
     font-weight: 600;
+    text-align: center;
 }
 
 .card-slot {

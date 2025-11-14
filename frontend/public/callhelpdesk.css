@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.atm-container {
+    width: 800px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e1e8ed;
+}
+
+.atm-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff6b6b 100%);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.atm-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.atm-footer {
+    background: #f8f9fa;
+    padding: 20px 40px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.security-notice {
+    color: #ff6b6b;
+    font-weight: 600;    
+}
+
+.helpdesk-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.circle-wrapper {
+    position: relative;
+}
+
+.large-circle {
+    width: 200px;
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 100px;
+}
+
+.large-circle img {
+    width: 300px;
+    opacity: 0.9;
+}
+
+.small-circle {
+    width: 72px;
+    height: 72px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+    transition: 0.2s;
+    margin-top: 340px;
+}
+
+.small-circle:hover {
+    transform: translateX(-50%) scale(1.08);
+}
+
+.small-circle span {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.small-circle img{
+    width: 52px;
+    margin-top: 10px
+}

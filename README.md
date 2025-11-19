@@ -44,7 +44,7 @@ Simple.
 
 then 
 
-**Startup.Ps1**
+**Run.Ps1**
 
 
 ## Features	

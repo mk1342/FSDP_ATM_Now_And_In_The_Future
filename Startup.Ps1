@@ -11,7 +11,7 @@ Write-Host "Working directory set to project root: $PSScriptRoot"
 
 # npm packages setup (if applicable)
 Write-Host "Installing required npm packages..."
-npm install express dotenv mongoose # check with package.json for any additional dependencies
+npm install express dotenv mongoose cors axios # check with package.json for any additional dependencies
 
 # vue cli (check)
 Write-Host "Checking if Vue CLI is installed..."

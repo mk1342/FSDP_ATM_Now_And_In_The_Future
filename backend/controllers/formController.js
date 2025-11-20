@@ -1,16 +1,15 @@
 import { getAllResponses, saveResponse } from '../models/FormModel.js';
 
-// Handle POST /form-submit
+// Handle POST
 export const submitForm = (req, res) => {
   try {
     const { timestamp, sessionID, answer1, answer2, answer3 } = req.body;
 
-    // Optional: validate required fields
+
     if (!timestamp || !sessionID || !answer1 || !answer2 || !answer3) {
       return res.status(400).json({ success: false, error: 'Missing required fields' });
     }
 
-    // Only save the fields you want
     const newResponse = saveResponse({ timestamp, sessionID, answer1, answer2, answer3 });
 
     res.status(200).json({ success: true, saved: newResponse });
@@ -19,7 +18,7 @@ export const submitForm = (req, res) => {
     res.status(500).json({ success: false, error: err.message });
   }
 };
-// Handle GET /form-responses
+// Handle GET
 export const getResponses = (req, res) => {
   try {
     const responses = getAllResponses();

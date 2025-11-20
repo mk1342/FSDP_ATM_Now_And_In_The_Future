@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2025-11-20T12:00:00",
+    "sessionID": "abc123",
+    "answer1": "Yes",
+    "answer2": "No",
+    "id": 1763601093449
+  },
+  {
+    "timestamp": "2025-11-20T12:00:00",
+    "sessionID": "abc123",
+    "answer1": "Yes",
+    "answer2": "No",
+    "id": 1763602882521
+  }
+]

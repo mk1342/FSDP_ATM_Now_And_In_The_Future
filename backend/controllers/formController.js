@@ -3,14 +3,14 @@ import { getAllResponses, saveResponse } from '../models/FormModel.js';
 // Handle POST
 export const submitForm = (req, res) => {
   try {
-    const { timestamp, sessionID, answer1, answer2, answer3 } = req.body;
+    const { timestamp, answer1, answer2, answer3, answer4, sessionID } = req.body;
 
 
-    if (!timestamp || !sessionID || !answer1 || !answer2 || !answer3) {
+    if (!timestamp || !sessionID || !answer1 || !answer2 || !answer3 || !answer4) {
       return res.status(400).json({ success: false, error: 'Missing required fields' });
     }
 
-    const newResponse = saveResponse({ timestamp, sessionID, answer1, answer2, answer3 });
+    const newResponse = saveResponse({ timestamp, answer1, answer2, answer3, answer4, sessionID});
 
     res.status(200).json({ success: true, saved: newResponse });
   } catch (err) {

@@ -59,3 +59,4 @@ Write-Host " To exit the terminal, press: Ctrl + C"
 while ($true) {
     Start-Sleep -Seconds 1
 }
+

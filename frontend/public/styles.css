@@ -24,7 +24,7 @@ body {
 }
 
 .atm-header {
-    background: linear-gradient(135deg, #ED2722 0%, #ED2722 100%);
+    background: linear-gradient(135deg, #ED2722 100%);
     color: white;
     padding: 20px 40px;
     display: flex;

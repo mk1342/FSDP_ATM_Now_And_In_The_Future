@@ -1,4 +1,3 @@
-// Cash Withdrawal Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Cash Withdrawal page loaded');
     

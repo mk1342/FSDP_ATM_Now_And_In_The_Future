@@ -1,0 +1,75 @@
+[
+  {
+    "id": "6ee8668c-1921-4455-845a-71c64cbf9880",
+    "timestamp": "2026-02-01T14:19:40.525Z",
+    "sessionID": "s_1769955580523_49i26e",
+    "role": "assistant",
+    "text": "Hello — I'm the OCBC AI helpdesk. How can I help you with this call today?",
+    "intent": "welcome"
+  },
+  {
+    "id": "317ffe98-0aeb-44c8-84d1-0ce31ecf3cd0",
+    "timestamp": "2026-02-01T14:19:55.385Z",
+    "sessionID": "test-123",
+    "role": "user",
+    "text": "Test message"
+  },
+  {
+    "id": "4f77ba85-3a11-49ab-87c9-772d00a4ce69",
+    "timestamp": "2026-02-01T14:21:01.994Z",
+    "sessionID": "s_1769955661993_4lb48j",
+    "role": "assistant",
+    "text": "Hello — I'm the OCBC AI helpdesk. How can I help you with this call today?",
+    "intent": "welcome"
+  },
+  {
+    "id": "b30cc99f-44da-41d4-9e3a-ec61611a38bf",
+    "timestamp": "2026-02-01T14:21:05.075Z",
+    "sessionID": "s_1769955661993_4lb48j",
+    "role": "user",
+    "text": "hello",
+    "isVoice": false,
+    "intent": {
+      "intent": "unknown"
+    }
+  },
+  {
+    "id": "ff6c07fc-af78-451b-8714-ba5cb944d656",
+    "timestamp": "2026-02-01T14:21:05.447Z",
+    "sessionID": "s_1769955661993_4lb48j",
+    "role": "assistant",
+    "text": "Sorry I can't help with that. Please try these instead",
+    "intent": "unknown"
+  },
+  {
+    "id": "2aa0fc60-4520-4ad2-a2d6-a1ac804f5cf5",
+    "timestamp": "2026-02-01T14:21:09.574Z",
+    "sessionID": "s_1769955661993_4lb48j",
+    "role": "user",
+    "text": "Show my balance",
+    "isVoice": false,
+    "intent": {
+      "intent": "balance"
+    }
+  },
+  {
+    "id": "28323c3a-884d-43c7-9aaa-baed4d5e1adc",
+    "timestamp": "2026-02-01T14:21:09.972Z",
+    "sessionID": "s_1769955661993_4lb48j",
+    "role": "assistant",
+    "text": "Available balance $5,243.12",
+    "intent": "balance",
+    "payload": {
+      "account": "123 ••• 789",
+      "available": 5243.12
+    }
+  },
+  {
+    "id": "80888b0d-3ff6-49ae-a9b3-5d61ce2cf9b7",
+    "timestamp": "2026-02-01T14:23:57.154Z",
+    "sessionID": "s_1769955837153_vjzf8y",
+    "role": "assistant",
+    "text": "Hello — I'm the OCBC AI helpdesk. How can I help you with this call today?",
+    "intent": "welcome"
+  }
+]

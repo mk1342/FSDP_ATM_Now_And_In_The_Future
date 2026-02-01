@@ -19,17 +19,33 @@ Reminder: Documentation please.
 
 ## Installation Instructions
 before cloning and running the project, ensure you have the following prerequisites installed on your machine:
-[MongoDB Local](https://www.mongodb.com/try/download/community)	
 
-[Node.js](https://nodejs.org/en)
+- [Node.js](https://nodejs.org/en)
+
+Optional (for full-stack with MongoDB):
+- [MongoDB Local](https://www.mongodb.com/try/download/community) or use Docker (recommended for dev)
 
 and the following installed from npm (and replicated in package.json):
 
-*** 
+***
 Express
 Dotenv
 Mongoose
 ***
+
+### Local development with Docker (quick)
+- Start only Mongo (recommended):
+  - docker: `docker compose up -d mongo`
+  - verify: `docker compose ps`
+- Start the app (root):
+  - With Mongo: `npm run dev:with-mongo`  (starts app and expects local Mongo)
+  - Demo mode (no Mongo): `npm run start:demo`  or on Windows `npm run start:demo:win`
+- Tear down (remove volumes): `docker compose down -v`
+
+Notes:
+- To run the backend-only commands from the backend folder use `npm run backend:install` and `npm run backend:start`.
+- To persist a permanent local Mongo for multiple projects use a dedicated Docker volume; the compose file in this repo already creates `fsdp_atm_mongo_data`.
+
 
 ### highly recommended for troubleshooting
 [Postman](https://www.postman.com/downloads/) - for testing API endpoints

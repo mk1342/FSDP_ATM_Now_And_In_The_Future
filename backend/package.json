@@ -1,8 +1,18 @@
 {
+  "name": "backend",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "start:demo": "DISABLE_MONGO=1 node app.js",
+    "start:demo:win": "set \"DISABLE_MONGO=1\" && node app.js",
+    "docker:up:pg": "docker compose up -d postgres",
+    "docker:down": "docker compose down -v"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "googleapis": "^166.0.0",
-    "mongoose": "^8.19.3"
+    "pg": "^8.11.0"
   }
 }

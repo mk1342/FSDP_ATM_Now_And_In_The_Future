@@ -14,7 +14,9 @@
             </div>
             <div class="atm-title">More Services</div>
         </div>
-
+        <div class="header-translate">
+            <div id="google_translate_element"></div>
+        </div>
         <div class="atm-main">
             <div class="greeting">
                 <h1>Hello!</h1>
@@ -22,11 +24,17 @@
             </div>
 
             <div class="services-grid">
+                <button class="service-card" onclick="window.location.href='cash-withdrawal.html'">
+                    <div class="service-icon">💵</div>
+                    <div class="service-content">
+                        <h3>Withdrawal</h3>
+                    </div>
+                </button>
+
                 <button class="service-card" onclick="window.location.href='transfer-settings.html'">
                     <div class="service-icon">🔄</div>
                     <div class="service-content">
-                        <h3>Set up quick transaction</h3>
-                        <p>Configure fast transfer settings</p>
+                        <h3>Transaction</h3>
                     </div>
                 </button>
 
@@ -34,7 +42,6 @@
                     <div class="service-icon">📊</div>
                     <div class="service-content">
                         <h3>Balance Inquiry</h3>
-                        <p>Check account balance</p>
                     </div>
                 </button>
 
@@ -42,7 +49,6 @@
                     <div class="service-icon">🧾</div>
                     <div class="service-content">
                         <h3>Bill Payment</h3>
-                        <p>Pay your bills</p>
                     </div>
                 </button>
 
@@ -50,7 +56,6 @@
                     <div class="service-icon">💸</div>
                     <div class="service-content">
                         <h3>Transfer Funds</h3>
-                        <p>Send money to others</p>
                     </div>
                 </button>
 
@@ -58,15 +63,6 @@
                     <div class="service-icon">🏦</div>
                     <div class="service-content">
                         <h3>CPF Services</h3>
-                        <p>CPF transactions</p>
-                    </div>
-                </button>
-
-                <button class="service-card" onclick="window.location.href='manage-investments.html'">
-                    <div class="service-icon">📈</div>
-                    <div class="service-content">
-                        <h3>Investment Services</h3>
-                        <p>Manage investments</p>
                     </div>
                 </button>
             </div>
@@ -75,12 +71,30 @@
         <div class="atm-footer">
             <div class="control-panel">
                 <button class="control-btn back-btn" onclick="window.location.href='index.html'">
-                    ← Back to Main
+                    Cancel
                 </button>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            
+            // Remove Google branding frame after load
+            setTimeout(function() {
+                var frame = document.querySelector('.goog-te-banner-frame');
+                if (frame) frame.style.display = 'none';
+                document.body.style.top = '0px';
+            }, 500);
+        }
+    </script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

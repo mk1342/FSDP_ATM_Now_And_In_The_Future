@@ -25,6 +25,9 @@ Write-Host "Frontend window launched."
 
 Write-Host "Both backend and frontend servers are running."
 
+Write-Host "starting form API."
+node backend\update-responses.mjs # run once to update form responses from google forms
+# that line is a bandaid
 
 Write-Host "Project running backend server... Press Ctrl+C to stop."
 

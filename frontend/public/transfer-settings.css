@@ -274,3 +274,38 @@ body {
         max-width: 100%;
     }
 }
+
+.header-translate {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+    transform: translateY(-50%);
+}
+
+.header-translate .goog-te-gadget-simple {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+}
+
+.header-translate .goog-te-menu-value span {
+    color: white !important;
+}
+
+.header-translate .goog-te-menu-value span:first-child {
+    color: #ffd700 !important;
+}
+
+@media (max-width: 768px) {
+    .header-translate {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}

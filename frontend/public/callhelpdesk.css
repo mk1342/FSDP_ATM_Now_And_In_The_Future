@@ -104,81 +104,37 @@ body {
     margin-top: 10px
 }
 
-/* ai-helpdesk popup styles */
-#ai-helpdesk-popup
-{
-    position:fixed; z-index:9999; 
-    background:#fff; 
-    color:#111; 
-    border-radius:12px; 
-    box-shadow:0 8px 20px rgba(0,0,0,.18); 
-    padding:12px; 
-    font-family:inherit; 
-    transform:translateY(6px); opacity:0; 
-    transition:opacity .18s ease,transform .18s ease;
+.header-translate {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+    transform: translateY(-50%);
 }
 
-#ai-helpdesk-popup.show
-{
-    opacity:1; 
-    transform:translateY(0);
-} 
-#ai-helpdesk-popup .popup-arrow
-{   position:absolute;
-    top:-8px; 
-    left:calc(50% - 8px); 
-    width:16px; height:8px; 
-    background:transparent; 
-    clip-path:polygon(50% 0, 0 100%, 100% 100%); 
-    background:linear-gradient(#fff,#fff); 
-    filter:drop-shadow(0 4px 10px rgba(0,0,0,.08));
+.header-translate .goog-te-gadget-simple {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
 }
-#ai-helpdesk-popup .popup-body
-{
-    display:flex; 
-    flex-direction:column;
-    gap:8px; 
-    align-items:flex-start; 
-    min-width:200px;
+
+.header-translate .goog-te-menu-value span {
+    color: white !important;
 }
-.popup-message
-{
-    margin:0; 
-    font-weight:600; 
-    font-size:14px;
+
+.header-translate .goog-te-menu-value span:first-child {
+    color: #ffd700 !important;
 }
-.popup-controls
-{
-    display:flex; 
-    gap:8px; 
-    width:100%;
-}
-.popup-controls button
-{
-    flex:0 0 auto; 
-    padding:8px 12px; 
-    border-radius:8px; 
-    border:0; 
-    background:#ED2722; /* primary: site red */
-    color:#fff; 
-    cursor:pointer;
-    font-weight:600;
-}
-.popup-controls button:hover{filter:brightness(.96)}
-.popup-controls button.secondary
-{
-    background:#fff;
-    color:#ED2722; /* secondary: white bg, red text */
-    border:1px solid rgba(237,39,34,0.12);
-    box-shadow:none;
-}
-.popup-controls button.secondary:hover{background:rgba(237,39,34,0.04)}
-@media (max-width:420px)
-{ 
-    #ai-helpdesk-popup
-    {
-        left:8px !important; 
-        right:8px; 
-        width:auto;
+
+@media (max-width: 768px) {
+    .header-translate {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
     }
 }

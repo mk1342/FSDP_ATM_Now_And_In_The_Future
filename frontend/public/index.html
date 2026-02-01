@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCBC ATM - Welcome</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="atm-container">
@@ -14,7 +14,9 @@
             </div>
             <div class="atm-title">Welcome to OCBC ATM</div>
         </div>
-
+        <div class="header-translate">
+            <div id="google_translate_element"></div>
+        </div>
         <div class="atm-main">
             <div class="left-panel">
                 <div class="greeting">
@@ -22,32 +24,19 @@
                     <p>What would you like to do today?</p>
                 </div>
 
-                <div class="service-category">
-                    <h2>Get Cash</h2>
-                    <div class="amount-grid">
-                        <button class="amount-btn" data-amount="50">$50</button>
-                        <button class="amount-btn" data-amount="80">$80</button>
-                        <button class="amount-btn" data-amount="100">$100</button>
-                        <button class="amount-btn" data-amount="500">$500</button>
-                    </div>
-                    <button class="other-amount-btn" id="other-amount">Other cash amounts</button>
-                </div>
             </div>
 
             <div class="right-panel">
                 <div class="non-cash-services">
-                    <h2>Non Cash Services</h2>
+                    <h2>Services</h2>
                     <div class="service-buttons">
-                        <button class="service-btn" data-service="settings" onclick="window.location.href='transfer-settings.html'">
-                            <span class="icon">🔄</span>
-                            Set up quick transaction
+                        <button class="service-btn" data-service="settings" onclick="window.location.href='cash-withdrawal.html'">
+                            Cash Withdrawal
                         </button>
                         <button class="service-btn" data-service="balance" onclick="window.location.href='account-balance.html'">
-                            <span class="icon">📊</span>
                             Balance enquiry
                         </button>
                         <button class="service-btn" data-service="more" onclick="window.location.href='morenoncashservice.html'">
-                            <span class="icon">📋</span>
                             More services
                         </button>
                     </div>
@@ -65,16 +54,27 @@
             </div>
         </div>
 
-        <div class="atm-footer">
-            <div class="control-panel">
-                <div class="card-slot">
-                    <div class="card-icon">💳</div>
-                    <p>Insert Card Here or Scan QR Code</p>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+            
+            // Remove Google branding frame after load
+            setTimeout(function() {
+                var frame = document.querySelector('.goog-te-banner-frame');
+                if (frame) frame.style.display = 'none';
+                document.body.style.top = '0px';
+            }, 500);
+        }
+    </script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

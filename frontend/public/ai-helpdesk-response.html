@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCBC AI Helpdesk</title>
+    <link rel="stylesheet" href="ai-helpdesk-response.css">
+</head>
+<body>
+    <div class="ai-helpdesk-container">
+        <div class="ai-header">
+            <div class="header-logo">
+                <img src="images/ocbc_logo.png" alt="OCBC Bank">
+            </div>
+            <div class="header-title">
+                <h1>AI Helpdesk Assistant</h1>
+                <p>Chat or speak to get help</p>
+            </div>
+            <div class="close-btn" onclick="window.location.href='call-helpdesk.html'">×</div>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+            <div class="message assistant-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hello! I'm your OCBC AI assistant. How can I help you today? You can ask about your account balance, fees, transfers, or use the voice button to speak.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="text-input-group">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Type your question..." 
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button id="sendBtn" onclick="sendMessage()">Send</button>
+            </div>
+
+            <div class="voice-controls">
+                <button id="voiceBtn" class="voice-btn" onclick="toggleVoiceRecording()">
+                    <span class="voice-icon">🎤</span>
+                    <span class="voice-status">Click to speak</span>
+                </button>
+                <button id="stopSpeechBtn" class="stop-speech-btn" onclick="stopSpeech()" style="display: none;">
+                    <span class="stop-icon">⏹️</span>
+                    <span class="stop-status">Stop speaking</span>
+                </button>
+                <div id="recordingTimer" class="recording-timer" style="display: none;">
+                    Recording: <span id="timerDisplay">0s</span>
+                </div>
+                <div id="interimTranscript" class="interim-transcript" style="display: none;">
+                    <span id="interimText"></span>
+                </div>
+                <div id="speakingIndicator" class="speaking-indicator" style="display: none;">
+                    <span class="speaking-dot"></span>
+                    <span>AI speaking...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="session-info">
+            <small>Session ID: <span id="sessionId"></span></small>
+        </div>
+    </div>
+
+    <script src="ai-helpdesk-response.js"></script>
+</body>
+</html>

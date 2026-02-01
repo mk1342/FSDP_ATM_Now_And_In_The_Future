@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ai-helpdesk-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e8ed;
+}
+
+.ai-header {
+    background: linear-gradient(135deg, #ED2722 0%, #FF5C42 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.header-title {
+    flex: 1;
+}
+
+.header-title h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.header-title p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.close-btn {
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    transition: opacity 0.2s;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.message-avatar {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.user-message .message-content {
+    background: #ED2722;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.assistant-message .message-content {
+    background: #f0f2f5;
+    color: #111;
+    border-bottom-left-radius: 4px;
+}
+
+/* Account card styles */
+.account-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.account-item {
+    background: linear-gradient(135deg, #ED2722 0%, #FF5C42 100%);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.account-type {
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.account-balance {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-number {
+    font-size: 11px;
+    opacity: 0.8;
+    font-family: monospace;
+}
+
+/* FAQ styles */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    border-left: 3px solid #ED2722;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.faq-question {
+    font-weight: 600;
+    font-size: 13px;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.faq-answer {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.input-section {
+    border-top: 1px solid #e1e8ed;
+    padding: 16px;
+    background: #fafafa;
+}
+
+.text-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#userInput:focus {
+    border-color: #ED2722;
+}
+
+#sendBtn {
+    padding: 12px 24px;
+    background: #ED2722;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#sendBtn:hover {
+    background: #CC2419;
+}
+
+.voice-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.voice-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ED2722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(237, 39, 34, 0.3);
+}
+
+.voice-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(237, 39, 34, 0.4);
+}
+
+.voice-btn.recording {
+    background: #FF5C42;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(237, 39, 34, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(237, 39, 34, 0.6);
+    }
+}
+
+.voice-icon {
+    font-size: 24px;
+}
+
+.voice-status {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.stop-speech-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+    animation: pulse-stop 1s infinite;
+}
+
+.stop-speech-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 82, 82, 0.4);
+}
+
+@keyframes pulse-stop {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(255, 82, 82, 0.6);
+    }
+}
+
+.stop-icon {
+    font-size: 24px;
+}
+
+.stop-status {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.recording-timer {
+    font-size: 12px;
+    color: #ED2722;
+    font-weight: 600;
+    text-align: center;
+}
+
+.interim-transcript {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 8px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.speaking-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #ED2722;
+    font-weight: 600;
+}
+
+.speaking-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #ED2722;
+    border-radius: 50%;
+    animation: speaking-pulse 1s infinite;
+}
+
+@keyframes speaking-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.session-info {
+    border-top: 1px solid #e1e8ed;
+    padding: 8px 16px;
+    background: #f9f9f9;
+    text-align: center;
+    color: #999;
+}
+
+@media (max-width: 480px) {
+    .ai-helpdesk-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .account-card {
+        grid-template-columns: 1fr;
+    }
+
+    .message-content {
+        max-width: 85%;
+    }
+}
